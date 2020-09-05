@@ -6,7 +6,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t choi205/react-test-app -f ./frontend/Docker.dev ./frontend
+    - docker build -t choi205/react-test-app -f ./frontend/Dockerfile.dev ./frontend
 
 script:
     - docker run -e CI=true choi205/reqct-test-app npm run test
